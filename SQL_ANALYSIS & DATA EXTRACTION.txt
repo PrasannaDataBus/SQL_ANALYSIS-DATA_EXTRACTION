@@ -1,0 +1,80 @@
+SELECT COUNT(*) FROM programming.programming_2022;
+#Overall data
+select * from programming.programming_2022;
+
+#Count of programmers
+SELECT COUNT(programmer_Type) FROM programming.programming_2022 WHERE programmer_Type="Advanced";
+
+#Full data only programmers
+SELECT * FROM programming.programming_2022 WHERE programmer_Type="Advanced";
+
+#Count of Members Of Github
+SELECT COUNT(programmer_Type) FROM programming.programming_2022 WHERE programmer_Type="Members Of Github";
+
+#Full data only Members Of Github
+SELECT * FROM programming.programming_2022 WHERE programmer_Type="Members Of Github";
+
+#Count of Programming_Students
+SELECT COUNT(programmer_Type) FROM programming.programming_2022 WHERE programmer_Type="Programming_Students";
+
+#Full data only Members Of Programming_Students
+SELECT * FROM programming.programming_2022 WHERE programmer_Type="Programming_Students";
+
+#Count of Star_Programmers
+SELECT COUNT(programmer_Type) FROM programming.programming_2022 WHERE programmer_Type="Star_Programmers";
+
+#Full data only Members Of Star_Programmers
+SELECT * FROM programming.programming_2022 WHERE programmer_Type="Star_Programmers";
+
+#
+SELECT Last_Name , First_Name, Course, programmer_Type 
+FROM programming.programming_2022
+WHERE Continent LIKE 'Europe';
+#
+SELECT Last_Name , First_Name, Course, programmer_Type 
+FROM programming.programming_2022
+WHERE Continent LIKE 'Africa';
+#
+SELECT Last_Name , First_Name, Course, programmer_Type 
+FROM programming.programming_2022
+WHERE Continent LIKE 'Middle East';
+#
+SELECT Last_Name , First_Name, Course, programmer_Type 
+FROM programming.programming_2022
+WHERE Continent LIKE 'Oceania';
+#
+SELECT Last_Name , First_Name, Course, programmer_Type 
+FROM programming.programming_2022
+WHERE Continent LIKE 'Africa';
+#
+SELECT Last_Name , First_Name, Course, programmer_Type 
+FROM programming.programming_2022
+WHERE Continent LIKE 'CIS';
+#
+SELECT Last_Name , First_Name, Course, programmer_Type 
+FROM programming.programming_2022
+WHERE Continent LIKE 'CIS';
+
+#USEFUL_OPERATION
+SELECT Continent, COUNT(*) as count
+FROM programming.programming_2022
+GROUP BY Continent 
+order by count DESC;
+#
+SELECT Leader_Board, COUNT(*) as count
+FROM programming.programming_2022
+GROUP BY Leader_Board
+order by count DESC;
+#
+SELECT Continent, Leader_Board, Likes, COUNT(*) as count
+FROM programming.programming_2022
+GROUP BY Likes
+order by count DESC;
+#
+SELECT Continent, Course_enrolled, COUNT(*) as count
+FROM programming.programming_2022
+GROUP BY Course_enrolled
+order by count DESC;
+
+
+
